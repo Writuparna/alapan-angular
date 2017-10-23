@@ -59,24 +59,31 @@ angular.module('alapanApp').directive('recentVideo',function(){
 		}
 	}
 });
-
-angular.module('alapanApp').directive('imageCarousel',function(){
+/*$(document).ready(function() {     
+	$("ul.studentList").owlCarousel({
+		items :8,
+		itemsMobile: [479,2],
+		itemsTablet: [768,4],
+		itemsDesktopSmall: [979,6],
+		itemsDesktop: [1199,8],
+		navigation:true,
+		pagination:false,
+		navigationText : ["<",">"],
+	});  
+});*/
+angular.module('alapanApp').directive('imageCarousel',function($timeout){
 	return{
-		restrict : 'AEC',
+		restrict : 'A',
+		replace : true,
 		templateUrl : 'app/components/home/imageCarousel.html',
 		link : function(scope, element, attribute){
-			var elem = angular.element(document.querySelector('ul.studentList'));
-			console.log('elem: '+JSON.stringify(elem));
-            /* angular.element(elem).owlCarousel({
-				items :8,
-				itemsMobile: [479,2],
-				itemsTablet: [768,4],
-				itemsDesktopSmall: [979,6],
-				itemsDesktop: [1199,8],
-				navigation:true,
-				pagination:false,
-				navigationText : ["<",">"],
-			});  */ 
+			var elem = $(element);
+			console.log('elem: '+JSON.stringify(element));
+			$timeout(function () {
+		        console.log('timeout '+JSON.stringify(element));
+		        elem.owlCarousel(scope.$eval(attribute.imageCarousel));
+		    }, 2000);
+           // 
 		}
 	}
 });

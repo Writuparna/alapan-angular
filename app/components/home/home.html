@@ -1,28 +1,25 @@
 <section class="welcomeSec">
-	<section-image imageurl="url1" imagealt="url1"></section-image> 
+	<!-- <section-image imageurl="url1" imagealt="url1"></section-image> --> 
 	<section-block heading ="Welcome to Alapan family!" content="Alapan Abrittee Sangstha was established in 1995"></section-block>
 </section>
 <section class="sirSec">
-	<section-image imageurl="url2" imagealt="url2"></section-image> 
+	<!-- <section-image imageurl="url2" imagealt="url2"></section-image> --> 
 	<section-block style="sirSec" heading ="Malay Podder" content="Malay Podder is not only the founder of Alapan he is the head of the Alapan family"></section-block>
 </section>
 <section class="studentsSec">
 	<section-block heading ="Our well wisher" content="So many renown artists enlighten Alapan Abrittee Sangstha by their performance. Here are some clicks of them."></section-block>
 	<section class="studentsSec">
-		<image-carousel></image-carousel>
+		<div image-carousel="{items :8,itemsMobile: [479,2],itemsTablet: [768,4],		itemsDesktopSmall: [979,6],itemsDesktop: [1199,8],navigation:true,		pagination:false,navigationText : ['<','>']}"></div>
 	</section>
 </section>
 <section class="viewerSec">
 	<section-block heading ="Special Thanks" content="Some of our well wishers who always help us to grow by their knowledge experiences and advice."></section-block>
 	<ul class="viewerList">
-		<li ng-repeat="viewer in ['Bablu Sarkar ','Rajnarayan Bhattacharya','Ramchandra pal','Dhrubo Bagchi']">
-			<!-- <div class="viewerStatemnet">
-				<p>Lorem ipsum dolor sit amet, consectetur dipisicing elit, sed doeiusmod Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip..</p>
-			</div>  -->   						
+		<li ng-repeat="viewer in ['Bablu Sarkar ','Rajnarayan Bhattacharya','Ramchandra pal','Dhrubo Bagchi']">						
 			<div class="viewerDetail">
-				<div class="viewerImage">
+				<!-- <div class="viewerImage">
 					<img src="{{viewer}}" alt="{{viewer}}">	
-				</div>
+				</div> -->
 				<div class="viewerDesc">
 					<p>{{viewer}} <span>{{viewer}}</span></p>
 				</div>
@@ -44,7 +41,7 @@
 				<div class="cdReleaseRightHd">
 					<h2>Released CDs</h2>
 					<a class="more" href="#">more</a>
-					<released-cd image-url="Hello" title="Hello kamon acho" short-description="Hello kamon achoo is dedicated to our loved ones"></released-cd>
+					<!-- <released-cd image-url="Hello" title="Hello kamon acho" short-description="Hello kamon achoo is dedicated to our loved ones"></released-cd> -->
 				</div>
 			</div>
 			<div class="recentVideo">
