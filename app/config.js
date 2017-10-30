@@ -9,6 +9,9 @@ angular.module('alapanApp').config(['$stateProvider','$urlRouterProvider','$loca
 		url: '/about',
 		template : '<single-page></single-page>',
 		controller : 'AboutController'
+	}).state('events',{
+		url: '/events',
+		template : '<two-column></two-column>'
 	});
 	$urlRouterProvider.otherwise('home'); 
 }])

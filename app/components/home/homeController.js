@@ -141,10 +141,8 @@ angular.module('alapanApp').controller('HomeController',['$scope','HomeFactory',
 			var videoAry = $scope.allVideo;
 			for(var i = 0; i<videoAry.length; i++){
 				var videoLink = videoAry[i].video_link.split('\/watch?v=').join('/embed/');
-				console.log('videoLink: '+JSON.stringify(videoLink));
 				videoAry[i].video_link = videoLink;
 			}
-			console.log('videoAPI: '+JSON.stringify(videoAry));/**/
 		},
 		function(){
 			console.log('data can not be retrieved');
