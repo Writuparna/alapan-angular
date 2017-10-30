@@ -11,6 +11,7 @@
    ========================================================================== */
 
 html {
+
     color: #222;
     font-size: 62.5%;
     line-height: 1.4;
@@ -120,6 +121,8 @@ h1.logo{margin: 0; padding: 0; font-size: 10px; font-size: 1rem; line-height: 10
 .phNumber h2{ margin: 0; font-weight: 300; font-size: 48px; font-size: 4.8rem; display: block; line-height: 48px;
 color: #fff;}
 
+
+.navbar.headerNav{margin: 0; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;}
 nav.mainNav{ position: absolute; left: 0; right: 0; margin: 0 auto; bottom: 0;font-family: 'Oswald', sans-serif;}
 ul.mainMenu{ margin: 0 auto; padding: 0; list-style: none; text-align: center;}
 ul.mainMenu li{ display: inline-block; vertical-align: top; margin: -4px;}
@@ -139,22 +142,22 @@ background:url( ../images/block-icon.png) no-repeat; width: 422px; height: 24px;
 .sirSec{padding:60px 0; background:url( ../images/pattern1.jpg); text-align: center;}
 
 .studentsSec{ margin: 0 auto; padding: 0; text-align: center;}
+.bannerSec ul.studentList li{height: auto; border:none;}
+.bannerSec ul.studentList li:hover .studentDesc{ height: 0; visibility: hidden; opacity: 0;display: none;}
 ul.studentList{ margin: 0; padding: 0; list-style: none;}
-ul.studentList li{ list-style: none; display: inline-block; position: relative; border: 1px solid #ddd; height: 160px; vertical-align: top; width: 14.3%;}
+ul.studentList li{ list-style: none; display: inline-block; position: relative; border: 1px solid #ddd; height: 160px; vertical-align: top; width: 100%;}
 ul.studentList li .studentDesc{ position: absolute; display: block; background: rgba(0,0,0,0.7); 
 width: 100%; height:0; left: 0; right: 0; top: auto; bottom: 0; text-align: center; transition: all 500ms ease-in-out; 
 -ms-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; 
 -webkit-transition: all 500ms ease-in-out;  -o-transition: all 500ms ease-in-out; visibility: hidden; opacity: 0;
 text-transform: capitalize;}
-ul.studentList li .studentDesc p{ color: #fff; margin-top: 80%;}
-ul.studentList li:hover .studentDesc{ height: 100%; visibility: visible; opacity: 1;}
-.studentsSec .studentList.owl-theme .owl-controls {
-  margin-top: 0;
-  text-align: center;
-}
-.studentsSec .studentList.owl-theme .owl-controls .owl-buttons div {border-radius: 0; color: #fff;display: inline-block; font-size: 12px; margin: 0; opacity: 1; padding: 1%; width: 50%; font-weight: 400;font-size: 30px; font-size: 3rem; line-height: 30px;}
-.studentsSec .studentList.owl-theme .owl-controls .owl-buttons div.owl-prev{ background: #e74c3c; text-align: right;}
-.studentsSec .studentList.owl-theme .owl-controls .owl-buttons div.owl-next{ background: #c1382a; text-align: left;}
+ul.studentList li .studentDesc p{ color: #fff; margin-top: 35%;}
+ul.studentList li:hover .studentDesc{ height: 100%; visibility: visible; opacity: 1; display: block;}
+.studentsSec .studentList.owl-theme .owl-controls{margin-top: 0; text-align: center;}
+.studentsSec .owl-theme .owl-controls { margin-top: 0px;}
+.studentsSec .studentList .owl-controls .owl-buttons div {border-radius: 0; color: #fff;display: inline-block; font-size: 12px; margin: 0; opacity: 1; padding: 1%; width: 50%; font-weight: 400;font-size: 30px; font-size: 3rem; line-height: 30px;}
+.studentsSec .studentList .owl-controls .owl-buttons div.owl-prev{ background: #e74c3c; text-align: right;}
+.studentsSec .studentList .owl-controls .owl-buttons div.owl-next{ background: #c1382a; text-align: left;}
 
 .viewerSec{ width: 100%; margin: 0 auto; padding:60px 0; text-align: center;}
 ul.viewerList{ margin: 70px auto 0; list-style: none; padding: 0;}
@@ -165,11 +168,8 @@ ul.viewerList li .viewerStatemnet::after {background:url( ../images/viewer-icon.
   content: ""; display: block; height: 40px; position: absolute; top: auto; width: 30px;}
 .viewerDetail{ width: 100%; display: block;}
 .viewerDetail:after{ display: block; clear: both; content: ""}
-.viewerImage{ float: left; width: 95px; height: 95px; border-radius: 50%; -webkit-border-radius: 50%; 
--moz-border-radius: 50%;-ms-border-radius: 50%; -o-border-radius: 50%; border:5px solid #e7e7e7; overflow: hidden;}
-.viewerImage{ border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;-ms-border-radius: 50%; 
--o-border-radius: 50%; margin: 0 20px 0 0;}
-.viewerDesc{ float: left;}
+.viewerImage{ float: none; width: 95px; height: 95px; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;-ms-border-radius: 50%; -o-border-radius: 50%; border:5px solid #e7e7e7; overflow: hidden; margin: 0 auto;}
+.viewerDesc{ float: none;}
 .viewerDesc p{ font-weight: 700; font-size: 20px; font-size: 2rem;}
 .viewerDesc span{ display: block; font-weight: 300; font-size: 14px; font-size: 1.4rem;}
 

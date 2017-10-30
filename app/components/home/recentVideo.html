@@ -1,6 +1,9 @@
 <li>
-	<!-- <div class="videoImg">
-		<iframe src="{{videoLink}}" frameborder="0" allowfullscreen></iframe>
-	</div>  -->
-	<h3>{{description}}</h3>
+	 <div class="videoImg">
+	 	<!-- <div ng-if="content[0].video_link" style="height:400px;"> -->
+			<iframe ng-src="{{content[0].video_link | trustAsResourceUrl}}" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<h3>{{content[0].title}}</h3>
 </li>
+

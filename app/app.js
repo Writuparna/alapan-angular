@@ -2,8 +2,6 @@
 
 angular.module('alapanApp',[
 	'ui.router',
+	'ngSanitize'
 ])
-.constant('apiConfig',{
-	apiUrl : 'http://localhost/alapan/',
-	baseUrl :'http://localhost/alapan/' ,
-})
+.constant('apiConfig','http://alapanabritteesangstha.com/api/alapon/');

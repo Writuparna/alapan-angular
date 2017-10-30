@@ -1,5 +1,5 @@
 <header ng-controller="HeaderController">
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse headerNav">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">{{brand}}</a>
@@ -8,10 +8,10 @@
         <li ng-repeat="nav in ['home', 'about', 'events', 'cd', 'gallery', 'contact']"><a href="#/{{nav}}">{{nav}}</a></li>
       </ul>
       <main-search search-fn="searchEvent"></main-search>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+     <!--  <ul class="nav navbar-nav navbar-right">
+       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+     </ul> -->
     </div>
   </nav>
  </header> 

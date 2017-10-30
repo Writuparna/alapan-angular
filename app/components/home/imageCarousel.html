@@ -1,6 +1,4 @@
-<ul class="studentList">
-	<li ng-repeat="artist in ['Ratna Mitra','Bratati Banyopadhyay','Chandramouli Bandyopadhyay', 'Jayeeta Bhattacharya', 'Amritokumvo', 'Bashudeb Nandi', 'Chandan Nath', 'Kabyayon', 'Late Shekhar Gupta', 'Piyali Ghosh', 'Rabin Majumdar', 'Rajnarayan Bhattacharya', 'Shankhamala', 'Somnath De', 'Tarunkanti Barik', 'Utpal Kundu']">
-		<!-- <img src="{{artist}}" alt="{{artist}}"> -->
-		<div class="studentDesc"><p>{{artist}}</p></div>
-	</li>
-</ul>
+<li ng-repeat="banner in carousel">
+	 <img ng-src="http://alapanabritteesangstha.com/uploads/{{folder}}/{{banner.image}}" alt="{{banner.title}}"><!-- -->
+	<div class="studentDesc"><p>{{banner.title}}</p></div>
+</li>

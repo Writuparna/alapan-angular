@@ -1,7 +1,22 @@
-<div class="cdReleaseLeft">
-	<img src="{{imageUrl}}" alt="{{imageUrl}}">	
-</div>
-<div class="cdReleaseRight">
-	<h3>{{title}}</h3>
-    <p>{{shortDescription}}</p>
-</div>
+<!-- <ul>
+	<li ng-repeat="cd in content">
+	 <div class="cdReleaseLeft" >
+			<img ng-src="http://alapanabritteesangstha.com/uploads/{{folder}}/{{cd.cover_image}}" alt="{{cd.title}}">	
+		</div>
+		<div class="cdReleaseRight">
+			<h3>{{cd.title}}</h3>
+		    <p>{{cd.description}}</p>
+		</div> 
+	</li>
+</ul> -->
+<ul>
+	<li>
+	 <div class="cdReleaseLeft" >
+			<img ng-src="http://alapanabritteesangstha.com/uploads/{{folder}}/{{content[0].cover_image}}" alt="{{content[0].title}}">	
+		</div>
+		<div class="cdReleaseRight">
+			<h3>{{content[0].title}}</h3>
+		    <p>{{content[0].description}}</p>
+		</div> 
+	</li>
+</ul>

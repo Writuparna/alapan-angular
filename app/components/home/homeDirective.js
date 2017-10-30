@@ -1,5 +1,4 @@
 'Use strict';
-
 angular.module('alapanApp').directive('sectionBlock',function(){
 	return{
 		restrict : 'AEC',
@@ -10,8 +9,8 @@ angular.module('alapanApp').directive('sectionBlock',function(){
 			style : '@'
 		}
 	}
-});
-angular.module('alapanApp').directive('sectionImage',function(){
+})
+.directive('sectionImage',function(){
 	return{
 		restrict : 'AEC',
 		template : '<div class="secImg"><img src="{{imageurl}}" alt="{{imagealt}}" ></div>',
@@ -20,9 +19,8 @@ angular.module('alapanApp').directive('sectionImage',function(){
 			imagealt : '@'
 		},
 	}
-});
-
-angular.module('alapanApp').directive('recentEvent',function(){
+})
+.directive('recentEvent',function(){
 	return{
 		restrict : 'AEC',
 		templateUrl : 'app/components/home/recentEvent.html',
@@ -35,55 +33,65 @@ angular.module('alapanApp').directive('recentEvent',function(){
 			shortDescription : '@' 
 		}
 	}
-});
-
-angular.module('alapanApp').directive('releasedCd',function(){
+})
+.directive('releasedCd',function(){
 	return{
 		restrict : 'AEC',
 		templateUrl : 'app/components/home/releasedCD.html',
 		scope : {
-			imageUrl : '@',
+			/*imageUrl : '@',
 			title : '@',
-			shortDescription : '@'
+			shortDescription : '@',*/
+			folder : '@',
+			content : '='
 		}
 	}
-});
-
-angular.module('alapanApp').directive('recentVideo',function(){
+})
+.directive('recentVideo',function(){
 	return{
 		restrict : 'E',
 		templateUrl : 'app/components/home/recentVideo.html',
 		scope : {
-			videoLink : '@',
-			description : '@'
+			content : '=',
 		}
 	}
-});
-/*$(document).ready(function() {     
-	$("ul.studentList").owlCarousel({
-		items :8,
-		itemsMobile: [479,2],
-		itemsTablet: [768,4],
-		itemsDesktopSmall: [979,6],
-		itemsDesktop: [1199,8],
-		navigation:true,
-		pagination:false,
-		navigationText : ["<",">"],
-	});  
-});*/
-angular.module('alapanApp').directive('imageCarousel',function($timeout){
+})
+.directive('imageCarousel',function($timeout){
 	return{
 		restrict : 'A',
-		replace : true,
+		//replace : true,
 		templateUrl : 'app/components/home/imageCarousel.html',
+		scope : {
+			carousel : '=',
+			folder : '@'
+		},
 		link : function(scope, element, attribute){
 			var elem = $(element);
-			console.log('elem: '+JSON.stringify(element));
 			$timeout(function () {
-		        console.log('timeout '+JSON.stringify(element));
 		        elem.owlCarousel(scope.$eval(attribute.imageCarousel));
 		    }, 2000);
-           // 
 		}
 	}
-});
+})
+.directive('testimonialCarousel',function($timeout){
+	return{
+		restrict : 'A',
+		templateUrl : 'app/components/home/testimonial.html',
+		scope : {
+			carousel : '=',
+			folder : '@'
+		},
+		link : function(scope, element, attribute){
+			var elem = $(element);
+			$timeout(function () {
+		        elem.owlCarousel(scope.$eval(attribute.testimonialCarousel));
+		    }, 2000);
+		}
+	}
+})
+.filter('trustAsResourceUrl', ['$sce', function($sce) {
+    return function(val) {
+        return $sce.trustAsResourceUrl(val);
+    };
+}])
+;
